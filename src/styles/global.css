@@ -1,0 +1,31 @@
+page {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background: transparent;
+}
+
+button:after {
+  border: none;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+

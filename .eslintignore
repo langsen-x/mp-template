@@ -1,0 +1,7 @@
+dist/
+node_modules/
+components/
+src/services/
+src/utils/
+src/wxcomponents/
+src/uni_modules

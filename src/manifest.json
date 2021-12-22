@@ -1,0 +1,68 @@
+{
+  "name": "mp-template",
+  "appid": "",
+  "description": "小程序模板",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "networkTimeout": {
+    "request": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "mp-weixin": {
+    "appid": "wx3875b7e3188de862",
+    "usingComponents": true,
+    "setting": {
+      "urlCheck": false
+    },
+    "permission": {
+      "scope.userLocation": {
+        "desc": "演示定位能力"
+      }
+    },
+    "optimization": {
+      "subPackages": true
+    }
+  },
+  "h5": {
+    "router": {
+      "mode": "history",
+      "base": "/mp-template"
+    },
+    "async": {
+      "timeout": 20000
+    },
+    "devServer": {
+      "host": "0.0.0.0",
+      "port": 8080,
+      "disableHostCheck": true,
+      "proxy": {
+        "/mp-template/proxy/auth/api": {
+          "target": "https://test.apigateway.jz-ins.com/auth/",
+          "pathRewrite": {
+            "/rights/proxy/notify/api": "/api"
+          }
+        },
+        "/mp-template/proxy/notify/api": {
+          "target": "https://test.apigateway.jz-ins.com/notify/",
+          "pathRewrite": {
+            "/rights/proxy/notify/api": "/api"
+          }
+        },
+        "/mp-template/proxy/paycenter/api": {
+          "target": "https://test.apigateway.jz-ins.com/pay/",
+          "pathRewrite": {
+            "/mp-template/proxy/paycenter/api": "/api"
+          }
+        },
+        "/mp-template/proxy/biz/api": {
+          "target": "https://test.apigateway.jz-ins.com/mp-template/",
+          "pathRewrite": {
+            "/mp-template/proxy/biz/api": "/api"
+          }
+        }
+      }
+    }
+  }
+}

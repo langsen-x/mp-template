@@ -1,0 +1,92 @@
+{
+  "name": "mp-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve:mp": "npm run dev:mp-weixin",
+    "dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch --minimize",
+    "info": "node node_modules/@dcloudi/vue-cli-plugin-uni/commands/info.js",
+    "build:mp-weixin:test": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build --minimize --mode test",
+    "build:mp-weixin:uat": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build --minimize --mode uat",
+    "build:mp-weixin:release": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build --minimize --mode production",
+    "compress": "cross-env JZ_COMPRESS_KEY=D8CvBzLlb12BQdsNR98ZX5sqNS5K0MpM jz-compress",
+    "gulp": "gulp"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app-plus": "^2.0.1-32920211122003",
+    "@dcloudio/uni-h5": "^2.0.1-32920211122003",
+    "@dcloudio/uni-helper-json": "*",
+    "@dcloudio/uni-mp-360": "^2.0.1-32920211122003",
+    "@dcloudio/uni-mp-alipay": "^2.0.1-32920211122003",
+    "@dcloudio/uni-mp-baidu": "^2.0.1-32920211122003",
+    "@dcloudio/uni-mp-qq": "^2.0.1-32920211122003",
+    "@dcloudio/uni-mp-toutiao": "^2.0.1-32920211122003",
+    "@dcloudio/uni-mp-weixin": "^2.0.1-32920211122003",
+    "@dcloudio/uni-quickapp-native": "^2.0.1-32920211122003",
+    "@dcloudio/uni-quickapp-webview": "^2.0.1-32920211122003",
+    "@dcloudio/uni-stat": "^2.0.1-32920211122003",
+    "axios": "^0.24.0",
+    "core-js": "^3.19.3",
+    "crypto-js": "^4.1.1",
+    "qs": "^6.10.2",
+    "regenerator-runtime": "^0.13.9",
+    "sn-js-utils": "^0.1.7",
+    "vue": "^2.6.14",
+    "weixin-js-sdk": "^1.6.0"
+  },
+  "devDependencies": {
+    "@champkeh/project-publish-helper": "^0.0.8",
+    "@dcloudio/types": "*",
+    "@dcloudio/uni-automator": "^2.0.1-32920211122003",
+    "@dcloudio/uni-cli-i18n": "^2.0.1-32920211122003",
+    "@dcloudio/uni-cli-shared": "^2.0.1-32920211122003",
+    "@dcloudio/uni-i18n": "^2.0.1-32920211122003",
+    "@dcloudio/uni-migration": "^2.0.1-32920211122003",
+    "@dcloudio/uni-template-compiler": "^2.0.1-32920211122003",
+    "@dcloudio/vue-cli-plugin-hbuilderx": "^2.0.1-32920211122003",
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.1-32920211122003",
+    "@dcloudio/vue-cli-plugin-uni-optimize": "^2.0.1-32920211122003",
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.1-32920211122003",
+    "@dcloudio/webpack-uni-pages-loader": "^2.0.1-32920211122003",
+    "@vue/cli-plugin-babel": "~4.5.15",
+    "@vue/cli-plugin-eslint": "~4.5.15",
+    "@vue/cli-plugin-vuex": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.3",
+    "cross-env": "^7.0.3",
+    "eslint": "7.12.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.0.0",
+    "eslint-plugin-vue": "7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-jsonminify": "^1.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "jest": "^27.4.5",
+    "jz-img-compress": "^0.0.6",
+    "mini-types": "*",
+    "miniprogram-api-typings": "*",
+    "node-sass": "^4.12.0",
+    "postcss-comment": "^2.0.0",
+    "sass-loader": "^8.0.2",
+    "through2": "^4.0.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "browserslist": [
+    "Android >= 4",
+    "ios >= 8"
+  ],
+  "uni-app": {
+    "scripts": {}
+  },
+  "jz-compress": {
+    "targets": [
+      "src/static/images"
+    ],
+    "cache": ".cache/img-compress.json"
+  }
+}
