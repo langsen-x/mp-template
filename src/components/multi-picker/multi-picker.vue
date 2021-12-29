@@ -29,7 +29,7 @@ export default {
     },
     pickerIndex: {
       type: Array,
-      default: () => [0, 0],
+      default: () => [],
     },
     arrSource: {
       type: Array,
@@ -141,6 +141,7 @@ export default {
       } else if (e.detail.column === 2) {
         this.pickerIndex.splice(2, 1, e.detail.value)
       }
+      // console.log('this.pickerIndex:', this.pickerIndex)
       this.$emit('update:pickerIndex', this.pickerIndex)
     },
   },
@@ -157,14 +158,14 @@ export default {
     flex: 1;
 
     .value {
-      font-size: upx(30);
+      font-size: 30px;
       color: #333333;
     }
   }
 
   .icon {
-    width: upx(32);
-    height: upx(32);
+    width: 32px;
+    height: 32px;
   }
 }
 </style>

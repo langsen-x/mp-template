@@ -81,16 +81,16 @@ export default {
   width: 100%;
 
   .row, p {
-    padding: upx(20) 0;
+    padding: 20px 0;
   }
 
   .row {
     button {
-      width: upx(200);
-      height: upx(100);
-      line-height: upx(100);
-      border: upx(1) #cccccc solid;
-      font-size: upx(28);
+      width: 200px;
+      height: 100px;
+      line-height: 100px;
+      border: 1px #cccccc solid;
+      font-size: 28px;
     }
   }
 }

@@ -25,5 +25,9 @@ Vue.prototype.$makePhoneCall = function(phoneNumber) {
   })
 }
 
+Vue.prototype.$toRpx = function(px) {
+  return `${px}rpx`
+}
+
 Vue.prototype.$api = api
 Vue.prototype.$API_STATUS = API_STATUS

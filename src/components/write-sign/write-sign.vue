@@ -178,25 +178,25 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 upx(40);
+    margin: 0 0 40px;
 
     .btn {
       display: flex;
-      height: upx(50);
+      height: 50px;
       align-items: center;
-      font-size: upx(24);
+      font-size: 24px;
       color: #4DA0FF;
       background-color: #EBF4FF;
-      border-radius: upx(30);
-      padding: 0 upx(22);
+      border-radius: 30px;
+      padding: 0 22px;
     }
   }
 
   canvas {
-    border: upx(3) dashed #EDEDED;
+    border: 3px dashed #EDEDED;
     box-sizing: border-box;
     width: 100%;
-    height: upx(320);
+    height: 320px;
   }
 }
 </style>

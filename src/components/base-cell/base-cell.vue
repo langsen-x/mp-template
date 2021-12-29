@@ -180,7 +180,7 @@ export default {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: upx(90);
+  min-height: 90px;
   background: #FFFFFF;
   box-sizing: border-box;
 
@@ -192,11 +192,11 @@ export default {
   }
 
   .label, .value {
-    min-width: upx(190);
-    font-size: upx(30);
+    min-width: 190px;
+    font-size: 30px;
     font-weight: 400;
     color: #333333;
-    line-height: upx(30);
+    line-height: 30px;;
   }
 
   .value {
@@ -208,11 +208,11 @@ export default {
   }
 
   .icon-bg {
-    margin-left: upx(10);
+    margin-left: 10px;
 
     .icon {
-      width: upx(30);
-      height: upx(30);
+      width: 30px;
+      height: 30px;
     }
   }
 }

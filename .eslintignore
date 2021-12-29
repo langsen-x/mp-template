@@ -1,7 +1,8 @@
 dist/
 node_modules/
 components/
+src/module/
 src/services/
 src/utils/
 src/wxcomponents/
-src/uni_modules
+src/uni_modules/

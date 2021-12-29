@@ -61,8 +61,8 @@ export default {
 }
 
 .modal-wrapper > .modal {
-  width: upx(600);
-  min-height: upx(300);
+  width: 600px;
+  min-height: 300px;
   margin: 0 auto;
   background: #FFFFFF;
   border-radius: 12px;

@@ -3,7 +3,7 @@ import qs from 'qs'
 import Urls from './urls'
 import localStorage from '@utils/localStorage'
 import srmh9nv0 from './srmh9nv0'
-import { http } from '@module/luch-request'
+import http from '@module/luch-request'
 
 /**
  * 处理请求选项
@@ -24,7 +24,6 @@ function processOptions(options) {
   _options.url = url
   _options.method = method
   _options.header = Object.create(null)
-  _options.header.VERSION = 'wushusong'
 
   // 处理userId (get请求不包含userId，防止泄露用户登录信息)
   const userId = localStorage.get('userId')

@@ -4,12 +4,23 @@
     font-style: normal;
 }
 
-/*通用 */
-/*view {
-    font-size: 28rpx;
-    line-height: 1.8;
-}*/
+/* #ifdef H5 */
+.fix-left-window {
+    padding-left: var(--window-left);
+}
 
+.pc-hide {
+    display: none !important;
+}
+
+/* #endif */
+
+/*通用 */
+
+/* view{
+	font-size:28rpx;
+	line-height:1.8;
+} */
 progress, checkbox-group {
     width: 100%;
 }
@@ -37,7 +48,7 @@ form {
 
 .uni-link {
     color: #576B95;
-    font-size: 26 rpx;
+    font-size: 26rpx;
 }
 
 .uni-center {
@@ -51,60 +62,54 @@ form {
 }
 
 .uni-inline-item text {
-    margin-right: 20 rpx;
+    margin-right: 20rpx;
 }
 
 .uni-inline-item text:last-child {
-    margin-right: 0 rpx;
-    margin-left: 20 rpx;
+    margin-right: 0rpx;
+    margin-left: 20rpx;
 }
 
 /* page */
-.uni-page-head {
-    padding: 35 rpx;
+.common-page-head {
+    padding: 35rpx;
     text-align: center;
 }
 
-.uni-page-head-title {
+.common-page-head-title {
     display: inline-block;
-    padding: 0 40 rpx;
-    font-size: 30 rpx;
-    height: 88 rpx;
-    line-height: 88 rpx;
+    padding: 0 40rpx;
+    font-size: 30rpx;
+    height: 88rpx;
+    line-height: 88rpx;
     color: #BEBEBE;
     box-sizing: border-box;
-    border-bottom: 2 rpx solid #D8D8D8;
-}
-
-.uni-page-body {
-    width: 100%;
-    flex-grow: 1;
-    overflow-x: hidden;
+    border-bottom: 2rpx solid #D8D8D8;
 }
 
 .uni-padding-wrap {
-    width: 690 rpx;
-    padding: 0 30 rpx;
+    /* width:690rpx; */
+    padding: 0 30rpx;
 }
 
 .uni-word {
     text-align: center;
-    padding: 200 rpx 100 rpx;
+    padding: 200rpx 100rpx;
 }
 
 .uni-title {
-    font-size: 30 rpx;
+    font-size: 30rpx;
     font-weight: 500;
-    padding: 20 rpx 0;
+    padding: 20rpx 0;
     line-height: 1.5;
 }
 
 .uni-text {
-    font-size: 28 rpx;
+    font-size: 28rpx;
 }
 
 .uni-title text {
-    font-size: 24 rpx;
+    font-size: 24rpx;
     color: #888;
 }
 
@@ -113,23 +118,23 @@ form {
 }
 
 .uni-text-small {
-    font-size: 24 rpx;
+    font-size: 24rpx;
 }
 
 .uni-common-mb {
-    margin-bottom: 30 rpx;
+    margin-bottom: 30rpx;
 }
 
 .uni-common-pb {
-    padding-bottom: 30 rpx;
+    padding-bottom: 30rpx;
 }
 
 .uni-common-pl {
-    padding-left: 30 rpx;
+    padding-left: 30rpx;
 }
 
 .uni-common-mt {
-    margin-top: 30 rpx;
+    margin-top: 30rpx;
 }
 
 /* 背景色 */
@@ -150,32 +155,32 @@ form {
 
 /* 标题 */
 .uni-h1 {
-    font-size: 80 rpx;
+    font-size: 80rpx;
     font-weight: 700;
 }
 
 .uni-h2 {
-    font-size: 60 rpx;
+    font-size: 60rpx;
     font-weight: 700;
 }
 
 .uni-h3 {
-    font-size: 48 rpx;
+    font-size: 48rpx;
     font-weight: 700;
 }
 
 .uni-h4 {
-    font-size: 36 rpx;
+    font-size: 36rpx;
     font-weight: 700;
 }
 
 .uni-h5 {
-    font-size: 28 rpx;
+    font-size: 28rpx;
     color: #8f8f94;
 }
 
 .uni-h6 {
-    font-size: 24 rpx;
+    font-size: 24rpx;
     color: #8f8f94;
 }
 
@@ -192,36 +197,36 @@ form {
 
 /* 竖向百分百按钮 */
 .uni-btn-v {
-    padding: 10 rpx 0;
+    padding: 10rpx 0;
 }
 
 .uni-btn-v button {
-    margin: 20 rpx 0;
+    margin: 20rpx 0;
 }
 
 /* 表单 */
 .uni-form-item {
     display: flex;
     width: 100%;
-    padding: 10 rpx 0;
+    padding: 10rpx 0;
 }
 
 .uni-form-item .title {
-    padding: 10 rpx 25 rpx;
+    padding: 10rpx 25rpx;
 }
 
 .uni-label {
-    width: 210 rpx;
+    width: 210rpx;
     word-wrap: break-word;
     word-break: break-all;
-    text-indent: 20 rpx;
+    text-indent: 20rpx;
 }
 
 .uni-input {
-    height: 50 rpx;
-    padding: 15 rpx 25 rpx;
-    line-height: 50 rpx;
-    font-size: 28 rpx;
+    height: 50rpx;
+    padding: 15rpx 25rpx;
+    line-height: 50rpx;
+    font-size: 28rpx;
     background: #FFF;
     flex: 1;
 }
@@ -231,7 +236,7 @@ radio-group, checkbox-group {
 }
 
 radio-group label, checkbox-group label {
-    padding-right: 20 rpx;
+    padding-right: 20rpx;
 }
 
 .uni-form-item .with-fun {
@@ -242,32 +247,31 @@ radio-group label, checkbox-group label {
 
 .uni-form-item .with-fun .uni-icon {
     width: 40px;
-    height: 80 rpx;
-    line-height: 80 rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     flex-shrink: 0;
 }
 
 /* loadmore */
 .uni-loadmore {
-    height: 80 rpx;
-    line-height: 80 rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     text-align: center;
-    padding-bottom: 30 rpx;
+    padding-bottom: 30rpx;
 }
 
 /*数字角标*/
-.uni-badge,
+/* .uni-badge,
 .uni-badge-default {
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 1;
-    display: inline-block;
-    padding: 3px 6px;
-    color: #333;
-    border-radius: 100px;
-    background-color: rgba(0, 0, 0, .15);
-}
-
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1;
+	display: inline-block;
+	padding: 3px 6px;
+	color: #333;
+	border-radius: 100px;
+	background-color: rgba(0, 0, 0, .15);
+} */
 .uni-badge.uni-badge-inverted {
     padding: 0 5px 0 0;
     color: #929292;
@@ -347,14 +351,14 @@ radio-group label, checkbox-group label {
 /*卡片视图 */
 .uni-card {
     background: #fff;
-    border-radius: 8 rpx;
-    margin: 20 rpx 0;
+    border-radius: 8rpx;
+    margin: 20rpx 0;
     position: relative;
-    box-shadow: 0 2 rpx 4 rpx rgba(0, 0, 0, .3);
+    /* box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, .3); */
 }
 
 .uni-card-content {
-    font-size: 30 rpx;
+    font-size: 30rpx;
 }
 
 .uni-card-content.image-view {
@@ -364,21 +368,21 @@ radio-group label, checkbox-group label {
 
 .uni-card-content-inner {
     position: relative;
-    padding: 30 rpx;
+    padding: 30rpx;
 }
 
 .uni-card-footer,
 .uni-card-header {
     position: relative;
     display: flex;
-    min-height: 50 rpx;
-    padding: 20 rpx 30 rpx;
+    min-height: 50rpx;
+    padding: 20rpx 30rpx;
     justify-content: space-between;
     align-items: center;
 }
 
 .uni-card-header {
-    font-size: 36 rpx;
+    font-size: 36rpx;
 }
 
 .uni-card-footer {
@@ -391,7 +395,7 @@ radio-group label, checkbox-group label {
     top: 0;
     right: 0;
     left: 0;
-    height: 2 rpx;
+    height: 2rpx;
     content: '';
     -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
@@ -408,13 +412,13 @@ radio-group label, checkbox-group label {
 }
 
 .uni-card-media-logo {
-    height: 84 rpx;
-    width: 84 rpx;
-    margin-right: 20 rpx;
+    height: 84rpx;
+    width: 84rpx;
+    margin-right: 20rpx;
 }
 
 .uni-card-media-body {
-    height: 84 rpx;
+    height: 84rpx;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -422,13 +426,13 @@ radio-group label, checkbox-group label {
 }
 
 .uni-card-media-text-top {
-    line-height: 36 rpx;
-    font-size: 34 rpx;
+    line-height: 36rpx;
+    font-size: 34rpx;
 }
 
 .uni-card-media-text-bottom {
-    line-height: 30 rpx;
-    font-size: 28 rpx;
+    line-height: 30rpx;
+    font-size: 28rpx;
     color: #8f8f94;
 }
 
@@ -458,19 +462,18 @@ radio-group label, checkbox-group label {
     background-color: #c8c7cc;
 }
 
-.uni-list::before {
-    position: absolute;
-    z-index: 10;
-    right: 0;
-    top: 0;
-    left: 0;
-    height: 1px;
-    content: '';
-    -webkit-transform: scaleY(.5);
-    transform: scaleY(.5);
-    background-color: #c8c7cc;
-}
-
+/* .uni-list::before {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	top: 0;
+	left: 0;
+	height: 1px;
+	content: '';
+	-webkit-transform: scaleY(.5);
+	transform: scaleY(.5);
+	background-color: #c8c7cc;
+} */
 .uni-list-cell {
     position: relative;
     display: flex;
@@ -484,13 +487,13 @@ radio-group label, checkbox-group label {
 }
 
 .uni-list-cell-pd {
-    padding: 22 rpx 30 rpx;
+    padding: 22rpx 30rpx;
 }
 
 .uni-list-cell-left {
     white-space: nowrap;
-    font-size: 28 rpx;
-    padding: 0 30 rpx;
+    font-size: 28rpx;
+    padding: 0 30rpx;
 }
 
 .uni-list-cell-db,
@@ -503,7 +506,7 @@ radio-group label, checkbox-group label {
     z-index: 3;
     right: 0;
     bottom: 0;
-    left: 30 rpx;
+    left: 30rpx;
     height: 1px;
     content: '';
     -webkit-transform: scaleY(.5);
@@ -512,11 +515,11 @@ radio-group label, checkbox-group label {
 }
 
 .uni-list .uni-list-cell:last-child::after {
-    height: 0 rpx;
+    height: 0rpx;
 }
 
 .uni-list-cell-last.uni-list-cell::after {
-    height: 0 rpx;
+    height: 0rpx;
 }
 
 .uni-list-cell-divider {
@@ -524,7 +527,7 @@ radio-group label, checkbox-group label {
     display: flex;
     color: #999;
     background-color: #f7f7f7;
-    padding: 15 rpx 20 rpx;
+    padding: 15rpx 20rpx;
 }
 
 .uni-list-cell-divider::before {
@@ -543,7 +546,7 @@ radio-group label, checkbox-group label {
     position: absolute;
     right: 0;
     bottom: 0;
-    left: 0 rpx;
+    left: 0rpx;
     height: 1px;
     content: '';
     -webkit-transform: scaleY(.5);
@@ -552,9 +555,9 @@ radio-group label, checkbox-group label {
 }
 
 .uni-list-cell-navigate {
-    font-size: 30 rpx;
-    padding: 22 rpx 30 rpx;
-    line-height: 48 rpx;
+    font-size: 30rpx;
+    padding: 22rpx 30rpx;
+    line-height: 48rpx;
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -565,18 +568,18 @@ radio-group label, checkbox-group label {
 }
 
 .uni-list-cell-navigate {
-    padding-right: 36 rpx;
+    padding-right: 36rpx;
 }
 
 .uni-navigate-badge {
-    padding-right: 50 rpx;
+    padding-right: 50rpx;
 }
 
 .uni-list-cell-navigate.uni-navigate-right:after {
     font-family: uniicons;
     content: '\e583';
     position: absolute;
-    right: 24 rpx;
+    right: 24rpx;
     top: 50%;
     color: #bbb;
     -webkit-transform: translateY(-50%);
@@ -587,7 +590,7 @@ radio-group label, checkbox-group label {
     font-family: uniicons;
     content: '\e581';
     position: absolute;
-    right: 24 rpx;
+    right: 24rpx;
     top: 50%;
     color: #bbb;
     -webkit-transform: translateY(-50%);
@@ -598,7 +601,7 @@ radio-group label, checkbox-group label {
     font-family: uniicons;
     content: '\e580';
     position: absolute;
-    right: 24 rpx;
+    right: 24rpx;
     top: 50%;
     color: #bbb;
     -webkit-transform: translateY(-50%);
@@ -620,11 +623,11 @@ radio-group label, checkbox-group label {
 }
 
 .uni-collapse .uni-list-cell {
-    padding-left: 20 rpx;
+    padding-left: 20rpx;
 }
 
 .uni-collapse .uni-list-cell::after {
-    left: 52 rpx;
+    left: 52rpx;
 }
 
 .uni-list.uni-active {
@@ -638,7 +641,7 @@ radio-group label, checkbox-group label {
     width: 100%;
     box-sizing: border-box;
     flex-direction: row;
-    padding: 22 rpx 30 rpx;
+    padding: 22rpx 30rpx;
 }
 
 .uni-triplex-right,
@@ -652,7 +655,7 @@ radio-group label, checkbox-group label {
 }
 
 .uni-triplex-left .uni-title {
-    padding: 8 rpx 0;
+    padding: 8rpx 0;
 }
 
 .uni-triplex-left .uni-text, .uni-triplex-left .uni-text-small {
@@ -666,7 +669,7 @@ radio-group label, checkbox-group label {
 
 /* 图文列表 */
 .uni-media-list {
-    padding: 22 rpx 30 rpx;
+    padding: 22rpx 30rpx;
     box-sizing: border-box;
     display: flex;
     width: 100%;
@@ -674,7 +677,7 @@ radio-group label, checkbox-group label {
 }
 
 .uni-navigate-right.uni-media-list {
-    padding-right: 74 rpx;
+    padding-right: 74rpx;
 }
 
 .uni-pull-right {
@@ -682,14 +685,14 @@ radio-group label, checkbox-group label {
 }
 
 .uni-pull-right > .uni-media-list-logo {
-    margin-right: 0 rpx;
-    margin-left: 20 rpx;
+    margin-right: 0rpx;
+    margin-left: 20rpx;
 }
 
 .uni-media-list-logo {
-    height: 84 rpx;
-    width: 84 rpx;
-    margin-right: 20 rpx;
+    height: 84rpx;
+    width: 84rpx;
+    margin-right: 20rpx;
 }
 
 .uni-media-list-logo image {
@@ -698,7 +701,7 @@ radio-group label, checkbox-group label {
 }
 
 .uni-media-list-body {
-    height: 84 rpx;
+    height: 84rpx;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -709,36 +712,36 @@ radio-group label, checkbox-group label {
 
 .uni-media-list-text-top {
     width: 100%;
-    line-height: 36 rpx;
-    font-size: 30 rpx;
+    line-height: 36rpx;
+    font-size: 30rpx;
 }
 
 .uni-media-list-text-bottom {
     width: 100%;
-    line-height: 30 rpx;
-    font-size: 26 rpx;
+    line-height: 30rpx;
+    font-size: 26rpx;
     color: #8f8f94;
 }
 
 /* 九宫格 */
 .uni-grid-9 {
     background: #f2f2f2;
-    width: 750 rpx;
+    width: 750rpx;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border-top: 2 rpx solid #eee;
+    border-top: 2rpx solid #eee;
 }
 
 .uni-grid-9-item {
-    width: 250 rpx;
-    height: 200 rpx;
+    width: 250rpx;
+    height: 200rpx;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 2 rpx solid;
-    border-right: 2 rpx solid;
+    border-bottom: 2rpx solid;
+    border-right: 2rpx solid;
     border-color: #eee;
     box-sizing: border-box;
 }
@@ -748,16 +751,16 @@ radio-group label, checkbox-group label {
 }
 
 .uni-grid-9-image {
-    width: 100 rpx;
-    height: 100 rpx;
+    width: 100rpx;
+    height: 100rpx;
 }
 
 .uni-grid-9-text {
-    width: 250 rpx;
-    line-height: 4 rpx;
-    height: 40 rpx;
+    width: 250rpx;
+    line-height: 4rpx;
+    height: 40rpx;
     text-align: center;
-    font-size: 30 rpx;
+    font-size: 30rpx;
 }
 
 .uni-grid-9-item-hover {
@@ -781,7 +784,7 @@ radio-group label, checkbox-group label {
 }
 
 .uni-uploader-body {
-    margin-top: 16 rpx;
+    margin-top: 16rpx;
 }
 
 .uni-uploader__files {
@@ -791,23 +794,23 @@ radio-group label, checkbox-group label {
 }
 
 .uni-uploader__file {
-    margin: 10 rpx;
-    width: 210 rpx;
-    height: 210 rpx;
+    margin: 10rpx;
+    width: 210rpx;
+    height: 210rpx;
 }
 
 .uni-uploader__img {
     display: block;
-    width: 210 rpx;
-    height: 210 rpx;
+    width: 210rpx;
+    height: 210rpx;
 }
 
 .uni-uploader__input-box {
     position: relative;
-    margin: 10 rpx;
-    width: 208 rpx;
-    height: 208 rpx;
-    border: 2 rpx solid #D9D9D9;
+    margin: 10rpx;
+    width: 208rpx;
+    height: 208rpx;
+    border: 2rpx solid #D9D9D9;
 }
 
 .uni-uploader__input-box:before,
@@ -822,13 +825,13 @@ radio-group label, checkbox-group label {
 }
 
 .uni-uploader__input-box:before {
-    width: 4 rpx;
-    height: 79 rpx;
+    width: 4rpx;
+    height: 79rpx;
 }
 
 .uni-uploader__input-box:after {
-    width: 79 rpx;
-    height: 4 rpx;
+    width: 79rpx;
+    height: 4rpx;
 }
 
 .uni-uploader__input-box:active {
@@ -856,9 +859,9 @@ radio-group label, checkbox-group label {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20 rpx;
+    padding: 20rpx;
     color: #8f8f94;
-    font-size: 28 rpx;
+    font-size: 28rpx;
 }
 
 .feedback-star-view.feedback-title {
@@ -868,12 +871,12 @@ radio-group label, checkbox-group label {
 
 .feedback-quick {
     position: relative;
-    padding-right: 40 rpx;
+    padding-right: 40rpx;
 }
 
 .feedback-quick:after {
     font-family: uniicons;
-    font-size: 40 rpx;
+    font-size: 40rpx;
     content: '\e581';
     position: absolute;
     right: 0;
@@ -888,34 +891,34 @@ radio-group label, checkbox-group label {
 }
 
 .feedback-textare {
-    height: 200 rpx;
-    font-size: 34 rpx;
-    line-height: 50 rpx;
+    height: 200rpx;
+    font-size: 34rpx;
+    line-height: 50rpx;
     width: 100%;
     box-sizing: border-box;
-    padding: 20 rpx 30 rpx 0;
+    padding: 20rpx 30rpx 0;
 }
 
 .feedback-input {
-    font-size: 34 rpx;
-    height: 50 rpx;
-    min-height: 50 rpx;
-    padding: 15 rpx 20 rpx;
-    line-height: 50 rpx;
+    font-size: 34rpx;
+    height: 50rpx;
+    min-height: 50rpx;
+    padding: 15rpx 20rpx;
+    line-height: 50rpx;
 }
 
 .feedback-uploader {
-    padding: 22 rpx 20 rpx;
+    padding: 22rpx 20rpx;
 }
 
 .feedback-star {
     font-family: uniicons;
-    font-size: 40 rpx;
-    margin-left: 6 rpx;
+    font-size: 40rpx;
+    margin-left: 6rpx;
 }
 
 .feedback-star-view {
-    margin-left: 20 rpx;
+    margin-left: 20rpx;
 }
 
 .feedback-star:after {
@@ -933,7 +936,7 @@ radio-group label, checkbox-group label {
 .feedback-submit {
     background: #007AFF;
     color: #FFFFFF;
-    margin: 20 rpx;
+    margin: 20rpx;
 }
 
 /* input group */
@@ -949,7 +952,7 @@ radio-group label, checkbox-group label {
     top: 0;
     right: 0;
     left: 0;
-    height: 2 rpx;
+    height: 2rpx;
     content: '';
     transform: scaleY(.5);
     background-color: #c8c7cc;
@@ -960,7 +963,7 @@ radio-group label, checkbox-group label {
     right: 0;
     bottom: 0;
     left: 0;
-    height: 2 rpx;
+    height: 2rpx;
     content: '';
     transform: scaleY(.5);
     background-color: #c8c7cc;
@@ -970,8 +973,8 @@ radio-group label, checkbox-group label {
     position: relative;
     display: flex;
     flex-direction: row;
-    font-size: 28 rpx;
-    padding: 22 rpx 30 rpx;
+    font-size: 28rpx;
+    padding: 22rpx 30rpx;
     justify-content: space-between;
 }
 
@@ -979,15 +982,15 @@ radio-group label, checkbox-group label {
     position: absolute;
     right: 0;
     bottom: 0;
-    left: 30 rpx;
-    height: 2 rpx;
+    left: 30rpx;
+    height: 2rpx;
     content: '';
     transform: scaleY(.5);
     background-color: #c8c7cc;
 }
 
 .uni-input-row label {
-    line-height: 70 rpx;
+    line-height: 70rpx;
 }
 
 /* textarea */
@@ -998,10 +1001,10 @@ radio-group label, checkbox-group label {
 
 .uni-textarea textarea {
     width: 96%;
-    padding: 18 rpx 2%;
+    padding: 18rpx 2%;
     line-height: 1.6;
-    font-size: 28 rpx;
-    height: 150 rpx;
+    font-size: 28rpx;
+    height: 150rpx;
 }
 
 /* tab bar */
@@ -1014,21 +1017,21 @@ radio-group label, checkbox-group label {
 }
 
 .uni-tab-bar .list {
-    width: 750 rpx;
+    width: 750rpx;
     height: 100%;
 }
 
 .uni-swiper-tab {
     width: 100%;
     white-space: nowrap;
-    line-height: 100 rpx;
-    height: 100 rpx;
+    line-height: 100rpx;
+    height: 100rpx;
     border-bottom: 1px solid #c8c7cc;
 }
 
 .swiper-tab-list {
-    font-size: 30 rpx;
-    width: 150 rpx;
+    font-size: 30rpx;
+    width: 150rpx;
     display: inline-block;
     text-align: center;
     color: #555;
@@ -1045,12 +1048,12 @@ radio-group label, checkbox-group label {
 }
 
 .uni-tab-bar-loading {
-    padding: 20 rpx 0;
+    padding: 20rpx 0;
 }
 
 /* comment */
 .uni-comment {
-    padding: 5 rpx 0;
+    padding: 5rpx 0;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -1058,17 +1061,17 @@ radio-group label, checkbox-group label {
 
 .uni-comment-list {
     flex-wrap: nowrap;
-    padding: 10 rpx 0;
-    margin: 10 rpx 0;
+    padding: 10rpx 0;
+    margin: 10rpx 0;
     width: 100%;
     display: flex;
 }
 
 .uni-comment-face {
-    width: 70 rpx;
-    height: 70 rpx;
+    width: 70rpx;
+    height: 70rpx;
     border-radius: 100%;
-    margin-right: 20 rpx;
+    margin-right: 20rpx;
     flex-shrink: 0;
     overflow: hidden;
 }
@@ -1089,11 +1092,11 @@ radio-group label, checkbox-group label {
 
 .uni-comment-top text {
     color: #0A98D5;
-    font-size: 24 rpx;
+    font-size: 24rpx;
 }
 
 .uni-comment-date {
-    line-height: 38 rpx;
+    line-height: 38rpx;
     flex-direction: row;
     justify-content: space-between;
     display: flex !important;
@@ -1102,37 +1105,37 @@ radio-group label, checkbox-group label {
 
 .uni-comment-date view {
     color: #666666;
-    font-size: 24 rpx;
-    line-height: 38 rpx;
+    font-size: 24rpx;
+    line-height: 38rpx;
 }
 
 .uni-comment-content {
     line-height: 1.6em;
-    font-size: 28 rpx;
-    padding: 8 rpx 0;
+    font-size: 28rpx;
+    padding: 8rpx 0;
 }
 
 .uni-comment-replay-btn {
     background: #FFF;
-    font-size: 24 rpx;
-    line-height: 28 rpx;
-    padding: 5 rpx 20 rpx;
-    border-radius: 30 rpx;
+    font-size: 24rpx;
+    line-height: 28rpx;
+    padding: 5rpx 20rpx;
+    border-radius: 30rpx;
     color: #333 !important;
-    margin: 0 10 rpx;
+    margin: 0 10rpx;
 }
 
 /* swiper msg */
 .uni-swiper-msg {
     width: 100%;
-    padding: 12 rpx 0;
+    padding: 12rpx 0;
     flex-wrap: nowrap;
     display: flex;
 }
 
 .uni-swiper-msg-icon {
-    width: 50 rpx;
-    margin-right: 20 rpx;
+    width: 50rpx;
+    margin-right: 20rpx;
 }
 
 .uni-swiper-msg-icon image {
@@ -1142,11 +1145,11 @@ radio-group label, checkbox-group label {
 
 .uni-swiper-msg swiper {
     width: 100%;
-    height: 50 rpx;
+    height: 50rpx;
 }
 
 .uni-swiper-msg swiper-item {
-    line-height: 50 rpx;
+    line-height: 50rpx;
 }
 
 /* product */
@@ -1158,24 +1161,24 @@ radio-group label, checkbox-group label {
 }
 
 .uni-product {
-    padding: 20 rpx;
+    padding: 20rpx;
     display: flex;
     flex-direction: column;
 }
 
 .image-view {
-    height: 330 rpx;
-    width: 330 rpx;
-    margin: 12 rpx 0;
+    height: 330rpx;
+    width: 330rpx;
+    margin: 12rpx 0;
 }
 
 .uni-product-image {
-    height: 330 rpx;
-    width: 330 rpx;
+    height: 330rpx;
+    width: 330rpx;
 }
 
 .uni-product-title {
-    width: 300 rpx;
+    width: 300rpx;
     word-break: break-all;
     display: -webkit-box;
     overflow: hidden;
@@ -1186,8 +1189,8 @@ radio-group label, checkbox-group label {
 }
 
 .uni-product-price {
-    margin-top: 10 rpx;
-    font-size: 28 rpx;
+    margin-top: 10rpx;
+    font-size: 28rpx;
     line-height: 1.5;
     position: relative;
 }
@@ -1199,21 +1202,21 @@ radio-group label, checkbox-group label {
 .uni-product-price-favour {
     color: #888888;
     text-decoration: line-through;
-    margin-left: 10 rpx;
+    margin-left: 10rpx;
 }
 
 .uni-product-tip {
     position: absolute;
-    right: 10 rpx;
+    right: 10rpx;
     background-color: #ff3333;
     color: #ffffff;
-    padding: 0 10 rpx;
-    border-radius: 5 rpx;
+    padding: 0 10rpx;
+    border-radius: 5rpx;
 }
 
 /* timeline */
 .uni-timeline {
-    margin: 35 rpx 0;
+    margin: 35rpx 0;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1224,27 +1227,27 @@ radio-group label, checkbox-group label {
     display: flex;
     flex-direction: row;
     position: relative;
-    padding-bottom: 20 rpx;
+    padding-bottom: 20rpx;
     box-sizing: border-box;
     overflow: hidden;
 
 }
 
 .uni-timeline-item .uni-timeline-item-keynode {
-    width: 160 rpx;
+    width: 160rpx;
     flex-shrink: 0;
     box-sizing: border-box;
-    padding-right: 20 rpx;
+    padding-right: 20rpx;
     text-align: right;
-    line-height: 65 rpx;
+    line-height: 65rpx;
 }
 
 .uni-timeline-item .uni-timeline-item-divider {
     flex-shrink: 0;
     position: relative;
-    width: 30 rpx;
-    height: 30 rpx;
-    top: 15 rpx;
+    width: 30rpx;
+    height: 30rpx;
+    top: 15rpx;
     border-radius: 50%;
     background-color: #bbb;
 }
@@ -1253,8 +1256,8 @@ radio-group label, checkbox-group label {
 .uni-timeline-item-divider::before,
 .uni-timeline-item-divider::after {
     position: absolute;
-    left: 15 rpx;
-    width: 1 rpx;
+    left: 15rpx;
+    width: 1rpx;
     height: 100vh;
     content: '';
     background: inherit;
@@ -1278,7 +1281,7 @@ radio-group label, checkbox-group label {
 }
 
 .uni-timeline-item .uni-timeline-item-content {
-    padding-left: 20 rpx;
+    padding-left: 20rpx;
 }
 
 .uni-timeline-last-item .bottom-border::after {
@@ -1670,7 +1673,7 @@ radio-group label, checkbox-group label {
 
 /* 分界线 */
 .uni-divider {
-    height: 110 rpx;
+    height: 110rpx;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1678,9 +1681,9 @@ radio-group label, checkbox-group label {
 }
 
 .uni-divider__content {
-    font-size: 28 rpx;
+    font-size: 28rpx;
     color: #999;
-    padding: 0 20 rpx;
+    padding: 0 20rpx;
     position: relative;
     z-index: 101;
     background: #F4F5F6;
@@ -1695,4 +1698,8 @@ radio-group label, checkbox-group label {
     top: 50%;
     left: 0;
     transform: translateY(50%);
+}
+
+.left-win-active text {
+    color: #007AFF !important;
 }

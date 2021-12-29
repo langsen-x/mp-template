@@ -1,5 +1,5 @@
 import storage from '@utils/localStorage'
-import { CommonUtil, DateUtil } from 'sn-js-utils'
+import { CommonUtil } from 'sn-js-utils'
 import checkPlatform from '@utils/checkPlatform'
 
 // 指定排序的比较函数
@@ -112,21 +112,54 @@ export function calculateAge(idCard) {
  * @return {{year: number, day: number}}
  */
 export function calculateAgeFromBirth(birthday) {
-  const now = new Date()
-  const birth = birthday.replace(/\D/g, '')
+  let returnAge
+  const strBirthdayArr = new Date(birthday)
+  const birthYear = strBirthdayArr.getFullYear()
+  const birthMonth = strBirthdayArr.getMonth() + 1
+  const birthDay = strBirthdayArr.getDate()
 
-  const yearStart = DateUtil.getDateStart(now, 0)
-  const yearEnd = DateUtil.getDateEnd(birth, 0, 'yyyyMMdd')
-  let year = yearStart.getFullYear() - (yearEnd.getFullYear() + 1)
-  const day1 = DateUtil.getDateDiff(yearStart, new Date()).Day
-  const day2 = DateUtil.getDateDiff(birth, yearEnd, 'yyyyMMdd').Day + 1
-  let day = day1 + day2
-  if (day >= 365) {
-    year += 1
-    day %= 365
+  const now = new Date()
+  const nowYear = now.getFullYear()
+  const nowMonth = now.getMonth() + 1
+  const nowDay = now.getDate()
+
+  if (nowYear === birthYear) {
+    returnAge = 0// 同年 则为0岁
+  } else {
+    let ageDiff = nowYear - birthYear // 年之差
+    if (ageDiff > 0) {
+      if (nowMonth === birthMonth) {
+        let dayDiff = nowDay - birthDay// 日之差
+        if (dayDiff < 0) {
+          returnAge = ageDiff - 1
+        } else {
+          returnAge = ageDiff
+        }
+      } else {
+        let monthDiff = nowMonth - birthMonth// 月之差
+        if (monthDiff < 0) {
+          returnAge = ageDiff - 1
+        } else {
+          returnAge = ageDiff
+        }
+      }
+    } else {
+      returnAge = -1// 返回-1 表示出生日期输入错误 晚于今天
+    }
   }
-  return {
-    year,
-    day,
-  }
+  return returnAge
+}
+
+/**
+ * 该方法只能处理小整数，最靠谱的还是直接转成字符串手动处理
+ * @param num
+ * @param accuracy
+ * @return {string}
+ */
+export function toFixed(num, accuracy) {
+  const tmp = Intl.NumberFormat('zh-CN', {
+    style: 'decimal',
+    maximumFractionDigits: accuracy,
+  }).format(num)
+  return tmp.replace(/[^\d.]/g, '')
 }

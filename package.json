@@ -9,8 +9,7 @@
     "build:mp-weixin:test": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build --minimize --mode test",
     "build:mp-weixin:uat": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build --minimize --mode uat",
     "build:mp-weixin:release": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build --minimize --mode production",
-    "compress": "cross-env JZ_COMPRESS_KEY=D8CvBzLlb12BQdsNR98ZX5sqNS5K0MpM jz-compress",
-    "gulp": "gulp"
+    "compress": "cross-env JZ_COMPRESS_KEY=D8CvBzLlb12BQdsNR98ZX5sqNS5K0MpM jz-compress"
   },
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.1-32920211122003",
@@ -61,19 +60,14 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.0.0",
     "eslint-plugin-vue": "7.0.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-jsonminify": "^1.1.0",
-    "gulp-uglify-es": "^3.0.0",
     "jest": "^27.4.5",
     "jz-img-compress": "^0.0.6",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "node-sass": "^4.12.0",
     "postcss-comment": "^2.0.0",
+    "postcss-pxtransform": "^3.3.18",
     "sass-loader": "^8.0.2",
-    "through2": "^4.0.2",
     "vue-template-compiler": "^2.6.14"
   },
   "browserslist": [

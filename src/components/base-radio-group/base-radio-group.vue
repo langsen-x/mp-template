@@ -126,7 +126,7 @@ export default {
     align-items: center;
     font-weight: 400;
     color: #333333;
-    margin-right: upx(60);
+    margin-right: 60px;
   }
 }
 </style>

@@ -51,10 +51,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: upx(690);
-  height: upx(100);
+  width: 690px;
+  height: 100px;
   margin: 0 auto;
-  font-size: upx(34);
+  font-size: 34px;
   font-weight: 400;
   color: #FFFFFF;
   background: #4DA0FF;
@@ -67,9 +67,9 @@ export default {
 }
 
 .loading {
-  width: upx(30);
-  height: upx(30);
-  margin-right: upx(30);
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
   display: inline-block;
   vertical-align: middle;
   animation: base-loading 1s steps(12, end) infinite;

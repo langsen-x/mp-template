@@ -18,5 +18,9 @@ module.exports = {
       remove: process.env.UNI_PLATFORM !== 'h5',
     }),
     require('@dcloudio/vue-cli-plugin-uni/packages/postcss'),
+    require('postcss-pxtransform')({
+      platform: 'weapp',
+      designWidth: 750,
+    }),
   ],
 }
