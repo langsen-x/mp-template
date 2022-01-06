@@ -3,7 +3,9 @@ import qs from 'qs'
 import Urls from './urls'
 import localStorage from '@utils/localStorage'
 import srmh9nv0 from './srmh9nv0'
-import http from '@module/luch-request'
+import Request from '@module/luch-request'
+
+const http = new Request()
 
 /**
  * 处理请求选项

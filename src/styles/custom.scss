@@ -6,6 +6,11 @@
   font-display: swap;
 }
 
+// v-show是通过设置view的hidden属性，但是自行给view设置的display权重较高，使之失效，添加important使v-show强制生效
+view[hidden] {
+  display: none !important;
+}
+
 $custom-color-primary: #609583;
 $custom-color-secondary: #72AD99;
 $custom-bg-color: #F6F6F6;

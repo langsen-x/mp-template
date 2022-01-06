@@ -36,12 +36,12 @@ export default {
   methods: {
     goToComponent() {
       uni.navigateTo({
-        url: '/pages/sub1/component',
+        url: '/pages/sub1/pages/component',
       })
     },
     goToCard() {
       uni.navigateTo({
-        url: '/pages/sub1/eg-swiper',
+        url: '/pages/sub1/pages/eg-swiper',
       })
     },
     goUploadFile() {

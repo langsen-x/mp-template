@@ -22,26 +22,27 @@
     "list": [
       {
         "name": "组件示例",
-        "path": "pages/sub1/component"
+        "path": "pages/sub1/pages/component"
       },
       {
         "name": "滑动卡片示例",
-        "path": "pages/sub1/eg-swiper"
+        "path": "pages/sub1/pages/eg-swiper"
       }
     ]
   },
   "subPackages": [
     {
+      "name": "sub1",
       "root": "pages/sub1",
       "pages": [
         {
-          "path": "component",
+          "path": "pages/component",
           "style": {
             "navigationBarTitleText": "组件示例"
           }
         },
         {
-          "path": "eg-swiper",
+          "path": "pages/eg-swiper",
           "style": {
             "navigationBarTitleText": "滑动卡片示例"
           }
@@ -53,7 +54,7 @@
     "pages/main/index": {
       "network": "all",
       "packages": [
-        "pages/sub1"
+        "sub1"
       ]
     }
   }

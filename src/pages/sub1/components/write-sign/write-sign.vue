@@ -38,7 +38,7 @@ export default {
     }
   },
   onReady() {
-    let query = wx.createSelectorQuery().in(this)
+    const query = wx.createSelectorQuery().in(this)
     query.select('#canvas').boundingClientRect(data => {
       console.log('data: ', data)
       const {
@@ -143,7 +143,7 @@ export default {
                   msg: msg,
                 })
               } else {
-                reject({
+                resolve({
                   success: false,
                   msg: msg,
                 })
@@ -151,7 +151,7 @@ export default {
             })
           },
           fail: (res) => {
-            reject({
+            resolve({
               success: false,
               msg: res.errMsg,
             })

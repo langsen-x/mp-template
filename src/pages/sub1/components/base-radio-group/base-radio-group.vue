@@ -90,12 +90,9 @@ export default {
   methods: {
     handleClick(e) {
       if (this.type === 'single') {
-        this.items.map((i, idx) => {
-          if (i === e) {
-            i.checked = !i.checked
-          } else {
-            i.checked = false
-          }
+        if(e.checked) return
+        this.items.forEach(i => {
+          i.checked = i.value === e.value
         })
         this.$emit('click', e)
       } else {

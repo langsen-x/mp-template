@@ -22,6 +22,10 @@ input {
   background: transparent;
 }
 
+image {
+  display: block;
+}
+
 button:after {
   border: none;
   outline: none;

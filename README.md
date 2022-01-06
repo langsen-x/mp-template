@@ -26,9 +26,6 @@ const mtjwxsdk = require('./utils/mtj-wx-sdk.js')
 > a.分包
 >> 主包main只包含首页面，src/static只包含首页面所需静态资源文件<br>分包sub包含其他页面，新建static文件夹存储所需静态文件资源
 
-> b.压缩代码
->> 打包完生成dist之后，在根目录下运行yarn run gulp 或 npm run gulp，会再次减少代码体积
-
 4.插件使用 **https://ext.dcloud.net.cn/** 搜索
 
 echarts可以使用qiun-data-charts

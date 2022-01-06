@@ -1,5 +1,5 @@
 <template>
-  <view class="base-cell" :style="{borderBottom: border ? '1px #EFEFEF solid': 'unset'}">
+  <view :class="border ? 'base-cell base-cell__border' : 'base-cell'">
     <p class="label">{{ label }}</p>
     <view class="right">
       <view class="slot" v-if="useSlot">
@@ -7,23 +7,23 @@
       </view>
       <view class="slot" v-else>
         <p
-            v-if="!inputType"
-            :class="!value ? 'value value__placeholder' : 'value'"
-            :style="{ textAlign: labelPortion }">
+          v-if="!inputType"
+          :class="!value ? 'value value__placeholder' : 'value'"
+          :style="{ textAlign: labelPortion }">
           {{ value ? value : placeholder }}
         </p>
         <input
-            v-else
-            :placeholder="placeholder"
-            :style="{ textAlign: valuePortion }"
-            :type="inputType"
-            v-model="inputVal"
-            :minlength="minLength"
-            :maxlength="maxLength"
-            class="value"
-            @blur="blur"
-            @focus="focus"
-            @input="input"
+          v-else
+          :placeholder="placeholder"
+          :style="{ textAlign: valuePortion }"
+          :type="inputType"
+          v-model="inputVal"
+          :minlength="minLength"
+          :maxlength="maxLength"
+          class="value"
+          @blur="blur"
+          @focus="focus"
+          @input="input"
         />
         <view class="icon-bg" v-if="showIcon" @click="iconClick">
           <img :src="icon" alt="" class="icon">
@@ -66,7 +66,7 @@ export default {
     labelPortion: {
       type: String,
       default: 'left',
-      validator: function(value) {
+      validator: function (value) {
         return ['left', 'center', 'right'].indexOf(value) !== -1
       },
     },
@@ -76,7 +76,7 @@ export default {
     valuePortion: {
       type: String,
       default: 'left',
-      validator: function(value) {
+      validator: function (value) {
         return ['left', 'right'].indexOf(value) !== -1
       },
     },
@@ -184,11 +184,16 @@ export default {
   background: #FFFFFF;
   box-sizing: border-box;
 
+  &__border {
+    border-bottom: 1px #EFEFEF solid;
+  }
+
   .right, .slot {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    height: 100%;
   }
 
   .label, .value {
@@ -208,6 +213,9 @@ export default {
   }
 
   .icon-bg {
+    display: flex;
+    align-items: center;
+    height: 100%;
     margin-left: 10px;
 
     .icon {

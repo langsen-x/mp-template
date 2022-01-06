@@ -1,18 +1,18 @@
 <template>
-  <view class="multi-picker">
-    <picker class="picker"
-            mode="multiSelector"
-            :range-key="pickerKey"
-            :value="pickerIndex"
-            :range="pickerData"
-            @change="pickerChange"
-            @columnchange="columnChange">
+  <picker class="multi-picker"
+          mode="multiSelector"
+          :range-key="pickerKey"
+          :value="pickerIndex"
+          :range="pickerData"
+          @change="pickerChange"
+          @columnchange="columnChange">
+    <view class="picker">
       <p class="value" :style="!value ? `color: ${placeholderColor}` : ''">
         {{ value || placeholder }}
       </p>
-    </picker>
-    <img src="../../static/images/icon-arrow-right.png" alt="" class="icon">
-  </view>
+      <img src="@static/images/icon-arrow-right.png" alt="" class="icon">
+    </view>
+  </picker>
 </template>
 
 <script>
@@ -49,7 +49,7 @@ export default {
     },
     isThree: {
       type: Boolean,
-      default: false,  // 默认两列
+      default: false, // 默认两列
     },
   },
   data() {
@@ -73,7 +73,7 @@ export default {
       for (let i = 0; i < dataLen; i++) {
         // 将数据源中的二级分类 push 进 secondArr，作为二级分类的数据源
         const nextColumn = this.arrSource[i].children
-        this['colArr1'].push(nextColumn || [])
+        this.colArr1.push(nextColumn || [])
 
         this.isThree && this.lastColumn(nextColumn)
       }
@@ -85,12 +85,12 @@ export default {
         delete i.children
         return i
       })
-      const col2_arr = (this['colArr1'][0] || []).map((i) => {
+      const col2_arr = (this.colArr1[0] || []).map((i) => {
         delete i.children
         return i
       })
       if (this.isThree) {
-        this.pickerData = [col1_arr, col2_arr, this['colArr2'][0][0]]
+        this.pickerData = [col1_arr, col2_arr, this.colArr2[0][0]]
       } else {
         this.pickerData = [col1_arr, col2_arr]
       }
@@ -102,13 +102,13 @@ export default {
       for (let j = 0; j < data.length; j++) {
         temp.push(data[j].children)
       }
-      this['colArr2'].push(temp)
+      this.colArr2.push(temp)
     },
 
     pickerChange(e) {
       // console.log('e:', e)
       const [idx1, idx2, idx3] = e.target.value
-      let label = '', value = ''
+      let label = ''; let value = ''
       if (this.isThree) {
         label = [this.pickerData?.[0][idx1][this.pickerKey], this.pickerData?.[1][idx2][this.pickerKey], this.pickerData?.[2][idx3][this.pickerKey]]
         value = [this.pickerData?.[0][idx1][this.pickerValue], this.pickerData?.[1][idx2][this.pickerValue], this.pickerData?.[2][idx3][this.pickerValue]]
@@ -127,16 +127,16 @@ export default {
         this.col1Value = e.detail.value
         this.pickerIndex.splice(0, 1, this.col1Value)
         this.pickerIndex.splice(1, 1, 0)
-        this.pickerData.splice(1, 1, this['colArr1'][this.col1Value])
+        this.pickerData.splice(1, 1, this.colArr1[this.col1Value])
         if (this.isThree) {
           this.pickerIndex.splice(2, 1, 0)
-          this.pickerData.splice(2, 1, this['colArr2'][this.col1Value][0])
+          this.pickerData.splice(2, 1, this.colArr2[this.col1Value][0])
         }
       } else if (e.detail.column === 1) {
         this.pickerIndex.splice(1, 1, e.detail.value)
         if (this.isThree) {
           this.pickerIndex.splice(2, 1, 0)
-          this.pickerData.splice(2, 1, this['colArr2'][this.col1Value][e.detail.value])
+          this.pickerData.splice(2, 1, this.colArr2[this.col1Value][e.detail.value])
         }
       } else if (e.detail.column === 2) {
         this.pickerIndex.splice(2, 1, e.detail.value)
@@ -155,17 +155,22 @@ export default {
   width: 100%;
 
   .picker {
-    flex: 1;
+    display: flex;
+    align-items: center;
+    //width: 100%;
+    width: 440px;
 
     .value {
       font-size: 30px;
       color: #333333;
+      flex: 1;
     }
   }
 
   .icon {
     width: 32px;
     height: 32px;
+    margin-left: 10px;
   }
 }
 </style>

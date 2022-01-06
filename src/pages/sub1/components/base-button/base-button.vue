@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="loading || disabled" class="default">
+  <button :disabled="status" :class="status ? 'default default__disabled' : 'default'">
     <view v-if="loading" :style="{backgroundImage: 'url('+loadingIcon+')'}" class="loading"></view>
     <view v-show="!loading">
       <!-- @slot 按钮内容 -->
@@ -43,6 +43,11 @@ export default {
       default: '',
     },
   },
+  computed: {
+    status() {
+      return this.loading || this.disabled;
+    }
+  },
 }
 </script>
 
@@ -59,7 +64,7 @@ export default {
   color: #FFFFFF;
   background: #4DA0FF;
 
-  &[disabled] {
+  &__disabled {
     color: #FFFFFF !important;
     opacity: 0.5 !important;
     background: #2c2c2c !important;
