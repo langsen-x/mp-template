@@ -33,3 +33,11 @@ echarts可以使用qiun-data-charts
 picker使用自带的组件
 
 其他组件可以使用uni-ui中的组件，在src下新建uni_modules，按需导入，一次性导入同样会增加代码体积
+
+5.发现点
+
+a.预加载分包可以优化从主包页面跳转到分包页面时需要下载分包所消耗的白屏时间（pages.json下配置preloadRule）
+<br>
+b.按需引入组件可以减少页面渲染时间（manifest.json下配置"lazyCodeLoading": "requiredComponents"）
+<br>
+c.img懒加载可以减少大量的资源请求（标签设置lazy-load，但是lazy-load在上下三屏中不起作用，超过才会有效果（也就是一个页面足够长））
